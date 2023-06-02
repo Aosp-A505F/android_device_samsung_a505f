@@ -18,10 +18,12 @@ allow init shell_data_file:dir { relabelfrom };
 allow vold vendor_file:dir { read };
 allow vold vendor_file:dir { open };
 
+type per_boot_file, file_type, data_file_type, core_data_file_type;
+
 allow vendor_init proc_swappiness:file rw_file_perms;
 
-allow vendor_init cpdebug_efs_file:lnk_file setattr;
+#allow vendor_init exynos_data_file:dir rw_file_perms;
 
-allow vendor_init exynos_data_file:dir rw_file_perms;
+allow vendor_init cpdebug_efs_file:lnk_file setattr;
 
 dontaudit vendor_init radio_prop:file read;

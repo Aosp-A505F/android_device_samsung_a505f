@@ -21,15 +21,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 ## Inherit from a505f device
 $(call inherit-product, device/samsung/a505f/device.mk)
 
-## Inherit some common lineage stuff
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
-
-## Set Target
-TARGET_HAS_FOD := true
-
 ## Device identifier, this must come after all inclusions
 PRODUCT_DEVICE := a505f
-PRODUCT_NAME := lineage_a505f
+PRODUCT_NAME := aosp_a505f
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SM-A505F
 PRODUCT_MANUFACTURER := samsung

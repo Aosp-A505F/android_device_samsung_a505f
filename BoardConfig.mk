@@ -14,6 +14,9 @@
 # limitations under the License.
 
 DEVICE_PATH := device/samsung/a505f
+BOARD_INCLUDE_DTB_IN_BOOTIMG := true
+BOARD_INCLUDE_RECOVERY_DTBO := true
+TARGET_NO_RECOVERY := true
 
 ## Architecture
 TARGET_ARCH := arm64
@@ -93,10 +96,6 @@ TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_PATH)/include
 BOARD_KERNEL_IMAGE_NAME := Image
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/samsung/a50
-TARGET_KERNEL_CONFIG := a50-bocchi_defconfig
-TARGET_KERNEL_CLANG_COMPILE := true
-TARGET_KERNEL_CLANG_VERSION := r383902
-TARGET_KERNEL_LLVM_BINUTILS := false
 
 ## Keymaster
 TARGET_KEYMASTER_VARIANT := samsung
@@ -151,8 +150,6 @@ BOARD_HOSTAPD_PRIVATE_LIB        := lib_driver_cmd_slsi
 WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
 WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 WPA_SUPPLICANT_VERSION           := VER_0_8_X
-
-PRODUCT_CFI_INCLUDE_PATHS += hardware/samsung_slsi/scsc_wifibt/wpa_supplicant_lib
 
 ## Inherit from the proprietary configuration
 include vendor/samsung/a505f/BoardConfigVendor.mk

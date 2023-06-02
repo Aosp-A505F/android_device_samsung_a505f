@@ -21,6 +21,13 @@ $(call inherit-product, frameworks/native/build/phone-xhdpi-4096-dalvik-heap.mk)
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 PRODUCT_ENFORCE_RRO_TARGETS += *
 
+TARGET_PREBUILT_KERNEL := device/samsung/a505f-kernel/kernel
+TARGET_PREBUILT_DTBO := device/samsung/a505f-kernel/dtbo.img
+BOARD_PREBUILT_DTBIMAGE_DIR := device/samsung/a505f-kernel/dtb/
+PRODUCT_COPY_FILES += \
+  $(TARGET_PREBUILT_KERNEL):kernel \
+  $(TARGET_PREBUILT_DTBO):dtbo
+
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio.effect@7.0-impl:32 \
@@ -99,10 +106,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.drm@1.4.vendor:32 \
     android.hardware.drm-service.clearkey
-
-# FastCharge
-PRODUCT_PACKAGES += \
-    vendor.lineage.fastcharge@1.0-service.samsung
 
 # Gatekeeper
 PRODUCT_PACKAGES += \
@@ -249,10 +252,6 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/thermal/thermal_info_config.json:$(TARGET_COPY_OUT_VENDOR)/etc/thermal_info_config.json
-
-# Touch HAL
-PRODUCT_PACKAGES += \
-    vendor.lineage.touch@1.0-service.samsung
 
 # USB
 PRODUCT_PACKAGES += \
