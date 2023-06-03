@@ -10,7 +10,8 @@ echo "Cloning Dependencies Samsung"
 git clone https://github.com/LineageOS/android_hardware_samsung_slsi_libbt hardware/samsung_slsi/libbt;
 git clone https://github.com/LineageOS/android_hardware_samsung_slsi_scsc_wifibt_wifi_hal hardware/samsung_slsi/scsc_wifibt/wifi_hal;
 git clone https://github.com/LineageOS/android_hardware_samsung_slsi_scsc_wifibt_wpa_supplicant_lib hardware/samsung_slsi/scsc_wifibt/wpa_supplicant_lib;
-git clone https://github.com/LineageOS/android_device_samsung_slsi_sepolicy device/samsung_slsi/sepolicy
+git clone https://github.com/Aosp-A505F/android_device_samsung_slsi_sepolicy device/samsung_slsi/sepolicy
+git clone https://github.com/Aosp-A505F/android_hardware_samsung hardware/samsung
 echo ""
 
 # Framework
@@ -19,7 +20,6 @@ rm frameworks/base/core/java/android/os/Build.java && cp device/samsung/a505f/pa
 echo ""
 
 # Kernel
-echo "Cloning Clang + Kernel"
-git clone https://gitlab.com/ThankYouMario/android_prebuilts_clang-standalone -b 13 prebuilts/clang/host/linux-x86/clang-r433403b;
-git clone https://github.com/GiovanYCringe/kernel_a50 kernel/samsung/a50
-echo ""
+echo "Cloning kernel"
+git clone https://github.com/Aosp-A505F/android_device_samsung_a505f-kernel device/samsung/a505f-kernel
+echo

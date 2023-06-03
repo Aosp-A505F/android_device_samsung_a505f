@@ -279,3 +279,5 @@ PRODUCT_COPY_FILES += \
     
 # Get non-open-source specific aspects
 $(call inherit-product, vendor/samsung/a505f/a505f-vendor.mk)
+
+PRODUCT_CFI_INCLUDE_PATHS += hardware/samsung_slsi/scsc_wifibt/wpa_supplicant_lib
