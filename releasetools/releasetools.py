@@ -36,4 +36,5 @@ def PrintInfo(info, dest):
 
 def OTA_InstallEnd(info):
   AddImage(info, "RADIO", "dtb.img", "/dev/block/by-name/dtb")
+  AddImage(info, "IMAGES", "dtbo.img", "/dev/block/by-name/dtbo")
   return

@@ -21,9 +21,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 ## Inherit from a505f device
 $(call inherit-product, device/samsung/a505f/device.mk)
 
+$(call inherit-product, vendor/hentai/build/product/hentai_product.mk)
+
 ## Device identifier, this must come after all inclusions
 PRODUCT_DEVICE := a505f
-PRODUCT_NAME := aosp_a505f
+PRODUCT_NAME := hentai_a505f
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SM-A505F
 PRODUCT_MANUFACTURER := samsung

@@ -15,9 +15,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_a505f.mk
+    $(LOCAL_DIR)/hentai_a505f.mk
 
 COMMON_LUNCH_CHOICES := \
-    aosp_a505f-eng \
-    aosp_a505f-user \
-    aosp_a505f-userdebug
+    hentai_a505f-eng \
+    hentai_a505f-user \
+    hentai_a505f-userdebug
